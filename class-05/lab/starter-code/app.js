@@ -79,11 +79,52 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    //sum(a+b)
+    //multiply(a*b)
+    //16
+    
+    var AandB = sum(a,b)[0];    //11
+    
+    var AandBandC = sum( AandB ,  c )[0];
+    console.log( 'hello', AandBandC); 
+    
+    //var mAandB=(multiply, c);
+    
+    //140
+    var mAandB = multiply(a,b)[0]; //140
+    
+    var mAandBandC = multiply( mAandB , c )[0];
+    console.log(mAandBandC);
+    
+    //console.log('The product of '+a+ ' and '+b+ ' and ' +c+ ' is ' +mAandBandC+ '.');
+    
+     console.log([
+       AandBandC, 
+       mAandBandC, 
+       a+' and '+b+' and '+c+' sum to '+AandBandC+'.', 
+     'The product of '+a+' and '+b+' and '+c+' is '+mAandBandC+'.'
+     ]
+     );
+    
+    // console.log ([ AandBandC, 
+    //   mAandBandC, a+' and '+b+' and '+c+' sum to '+AandBandC+'.', 
+    //  'The product of '+a+' and '+b+' and '+c+' is '+mAandBandC+'.']);
+    
+     let answer = [
+       AandBandC[0], 
+       mAandBandC[0], 
+        a+' and '+b+' and '+c+' sum to '+AandBandC+'.', 
+     'The product of '+a+' and '+b+' and '+c+' is '+mAandBandC+'.'
+     ]
+    
+    return answer;
+    
+    
+    }
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
